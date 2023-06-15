@@ -17,7 +17,7 @@ public class App {
         System.out.println("");
 
         FacadePagamento pixPagamento = new FacadePagamento();
-        pixPagamento.realizarPagamento(purchase);
+        pixPagamento.pagarCompra(purchase);
 
         System.out.println("");
         System.out.println("    PEDIDO CANCELADO (... em breve)");
