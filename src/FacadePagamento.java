@@ -7,22 +7,13 @@ public class FacadePagamento {
 
     // }
 
-    //public void realizarPagamento(Pix pix, double valor) {
     public void realizarPagamento(Compra compra) {
-        //pix = new Pix();
-
-        System.out.println("REALIZANDO PAGAMENTO COM PIX");
-        System.out.println("Valor: "+compra.calcularCompra());
-
-        pix.detalhesPagamentos();
+        pix.detalhesPagamentos(compra);
 
 }
-
-    //Valide como será os comando que será feito no metódo
-    public void cancelarPagamento(Compra compra) {
-   
+    public void cancelarPagamento(Compra compra) {   
         System.out.println("O pagamento foi cancelado");
-        pix.CompraFinalizada();
+        pix.CompraFinalizada(compra);
 
     }
 
