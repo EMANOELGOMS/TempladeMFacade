@@ -26,15 +26,17 @@ public class App {
         
 
         System.out.println("");
-
-        PadraoMethod pix = new Pix();
-        //Pix pix2 = new Pix();
+        
+        MetodoPagamento pixPagamento = new MetodoPagamento();
 
         
-        pix.exibirComprovante();
-        //pix2
-        // facade >> Projeto é simplificar uma interface.
+        pixPagamento.realizarPagamento(purchase);
 
+
+
+        pixPagamento.cancelarPagamento();
+
+      
         /*
          * 
          * É importante ressaltar que o padrão Facade não “encapsula” as interfaces do sistema, o padrão Facade apenas fornece uma interface simplificada para acessar as suas funcionalidades
