@@ -13,7 +13,7 @@ public class FacadePagamento {
 }
     public void cancelarPagamento(Compra compra) {   
         System.out.println("O pagamento foi cancelado");
-        pix.CompraFinalizada(compra);
+        pix.compraFinalizada(compra);
 
     }
 

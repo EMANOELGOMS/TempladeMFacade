@@ -33,9 +33,15 @@ public class Pix extends PadraoMethod {
 
 
     @Override
-    void CompraFinalizada(Compra compra) {
+    void compraFinalizada(Compra compra) {
         System.out.println("PIX: COMPRA FINALIZADA");
         
+    }
+
+    @Override
+    void pedidoEnviado() {
+        
+        System.out.println("PIX: O PEDIDO ESTA SENDO ENVIADO");
     }
 
 
@@ -60,6 +66,6 @@ public class Pix extends PadraoMethod {
     // }
     }
 
-    
+ 
 }
 

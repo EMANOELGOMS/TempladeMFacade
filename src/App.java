@@ -42,6 +42,72 @@ public class App {
          * interface unificada para um conjunto de interfaces em um subsistema. O Facade
          * define uma interface de nível mais alto que facilita a utilização do
          * subsistema”.
+         * 
+         * 
+         * 
+         * 
+         * 
+         * // Subsistemas
+class Estoque {
+    public boolean verificarDisponibilidade(String produto) {
+        System.out.println("Verificando disponibilidade do produto: " + produto);
+        // Lógica para verificar a disponibilidade do produto no estoque
+        return true;
+    }
+}
+
+class Pagamento {
+    public void processarPagamento(double valor) {
+        System.out.println("Processando pagamento no valor de: R$" + valor);
+        // Lógica para processar o pagamento
+    }
+}
+
+class Envio {
+    public void enviarPedido(String produto, String endereco) {
+        System.out.println("Enviando pedido do produto: " + produto + " para o endereço: " + endereco);
+        // Lógica para enviar o pedido ao cliente
+    }
+}
+
+// Fachada
+class SistemaPedidosFacade {
+    private Estoque estoque;
+    private Pagamento pagamento;
+    private Envio envio;
+
+    public SistemaPedidosFacade() {
+        this.estoque = new Estoque();
+        this.pagamento = new Pagamento();
+        this.envio = new Envio();
+    }
+
+    public void processarPedido(String produto, double valor, String endereco) {
+        boolean disponibilidade = estoque.verificarDisponibilidade(produto);
+
+        if (disponibilidade) {
+            pagamento.processarPagamento(valor);
+            envio.enviarPedido(produto, endereco);
+            System.out.println("Pedido processado com sucesso!");
+        } else {
+            System.out.println("Produto indisponível no estoque. Pedido não processado.");
+        }
+    }
+}
+
+// Exemplo de uso
+public class SistemaGerenciamentoPedidos {
+    public static void main(String[] args) {
+        SistemaPedidosFacade facade = new SistemaPedidosFacade();
+
+        String produto = "Camiseta";
+        double valor = 49.99;
+        String endereco = "Rua Principal, 123";
+
+        facade.processarPedido(produto, valor, endereco);
+    }
+}
+
          */
     }
 }
