@@ -1,3 +1,4 @@
+//TEMPLATE METHOD
 public abstract class PadraoMethod {
 
     /*Metodos e os passos para permitir a implemetação em outas subclasses */
