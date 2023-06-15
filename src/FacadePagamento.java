@@ -7,7 +7,7 @@ public class FacadePagamento {
 
     // }
 
-    public void realizarPagamento(Compra compra) {
+    public void pagarCompra(Compra compra) {
         pix.detalhesPagamentos(compra);
 
 }
