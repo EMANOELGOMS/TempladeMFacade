@@ -27,14 +27,20 @@ public class App {
 
         System.out.println("");
         
-        MetodoPagamento pixPagamento = new MetodoPagamento();
+        FacadePagamento pixPagamento = new FacadePagamento();
 
         
         pixPagamento.realizarPagamento(purchase);
 
 
 
-        pixPagamento.cancelarPagamento();
+
+        System.out.println("");
+        System.out.println("    PEDIDO CANCELADO (... em breve)");
+
+        pixPagamento.cancelarPagamento(purchase);
+        
+    
 
       
         /*
