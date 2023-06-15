@@ -1,7 +1,7 @@
 //TEMPLATE METHOD
 public abstract class PadraoMethod {
 
-    /*Metodos e os passos para permitir a implemetação em outas subclasses */
+    /*Metodos e os passos para o processamento de pagamento*/
 
     final void detalhesPagamentos(Compra compra){ 
         if(realizarValidacao(compra)){
