@@ -7,14 +7,19 @@ public class FacadePagamento {
 
     // }
 
-    public void pagarCompra(Compra compra) {
-        pix.detalhesPagamentos(compra);
+//     public void pagarCompra(Compra compra) {
+//         pix.detalhesPagamentos(compra);
 
-}
+//}
     public void cancelarPagamento(Compra compra) {   
         System.out.println("O pagamento foi cancelado");
         pix.compraFinalizada(compra);
 
+    }
+
+    public void pagarComPix(Compra compra){
+        pix.detalhesPagamentos(compra);
+        //cancelarPagamento(compra);
     }
 
     public Pix getPix() {

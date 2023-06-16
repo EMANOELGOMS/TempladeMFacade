@@ -3,34 +3,47 @@ public class Pix extends PadraoMethod {
          
     @Override
     void realizarPagamento(Compra compra) {
-
+        System.out.println("===========================================");
         System.out.println("REALIZANDO PAGAMENTO COM PIX");
         System.out.println("Itens da Compra");        
         for(Product produto : compra.getProdutos()){
-            System.out.println("- " + produto.getNome() + " (" + produto.getPreco() + ")");
-        }       
+            System.out.println("- " + produto.getNome() + " (R$" + produto.getPreco() + ")");
+        }    
+        System.out.println("");   
         
-        System.out.println("Valor À PAGAR: "+compra.calcularCompra());
+        System.out.println("        Valor À PAGAR: R$"+compra.calcularCompra());
+        System.out.println("==========================================="); 
 
+    }
+
+     @Override
+    void compraAprovada(Compra compra) {
+        System.out.println("PROCESSANDO PAGAMENTO...");
+        System.out.println("PIX: COMPRA APROVADA");
     }
 
     @Override
     void exibirComprovante(Compra compra) {
-        System.out.println("PIX: EXIBIR COMPROVANTE");
+       // System.out.println("PIX: EXIBIR COMPROVANTE");
+        
+        System.out.println("==========================================="); 
+        System.out.println("COMPROVANTE DE PAGAMENTO");
+        System.out.println("Itens da Compra");        
+        for(Product produto : compra.getProdutos()){
+            System.out.println("- " + produto.getNome() + " (R$" + produto.getPreco() + ")");
+        }    
+        System.out.println("");   
+        
+        //System.out.println("Data do pagamento: "+compra);
+        System.out.println("Valor À PAGAR: R$"+compra.calcularCompra());
+        System.out.println("===========================================");
     }
 
 
     @Override
     void realizarTransacao(Compra compra) {
-        System.out.println("PIX: REALIZAR TRANSAÇÃO");
+        System.out.println("PIX: REALIZANDO TRANSAÇÃO");
     }
-
-
-    @Override
-    void compraAprovada(Compra compra) {
-        System.out.println("PIX: COMPRA APROVADA");
-    }
-
 
     @Override
     void compraFinalizada(Compra compra) {
@@ -42,6 +55,7 @@ public class Pix extends PadraoMethod {
     void pedidoEnviado() {
         
         System.out.println("PIX: O PEDIDO ESTA SENDO ENVIADO");
+        System.out.println("==========================================="); 
     }
 
 

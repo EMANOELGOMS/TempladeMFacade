@@ -14,15 +14,21 @@ public class App {
         purchase.addproduto(item2);
         purchase.addproduto(item3);
 
+        purchase.dadosdaCompra(purchase, "12121245","12/12/12");
+
         System.out.println("");
 
-        FacadePagamento pixPagamento = new FacadePagamento();
-        pixPagamento.pagarCompra(purchase);
+        FacadePagamento Pagamento = new FacadePagamento();
+        Pagamento.pagarComPix(purchase);
+
+
 
         System.out.println("");
         System.out.println("    PEDIDO CANCELADO (... em breve)");
 
-        pixPagamento.cancelarPagamento(purchase);
+        Pagamento.cancelarPagamento(purchase);
+
+
 
         /*
          * 

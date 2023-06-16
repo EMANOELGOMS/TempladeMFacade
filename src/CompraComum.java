@@ -35,4 +35,10 @@ public class CompraComum implements Compra{
         
         return produtos;
     }
+
+
+    @Override
+    public void dadosdaCompra(Compra compra,String idCompras, String dataCompra){
+                
+    }
 }
