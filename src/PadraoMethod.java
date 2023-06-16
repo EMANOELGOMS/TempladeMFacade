@@ -5,11 +5,10 @@ public abstract class PadraoMethod {
 
     final void detalhesPagamentos(Compra compra){ 
         if(realizarValidacao(compra)){
-
+            exibirProdutos(compra);
             realizarPagamento(compra);
             compraAprovada(compra);
             realizarTransacao(compra);
-            realizarValidacao(compra);
             compraFinalizada(compra);
             exibirComprovante(compra);
             pedidoEnviado();
@@ -17,14 +16,14 @@ public abstract class PadraoMethod {
             System.out.println("Pedido inválido. Não pode ser processado.");
             }
         }
-
-    abstract void realizarPagamento(Compra compra);
-    abstract boolean realizarValidacao(Compra compra); 
-    abstract void compraAprovada(Compra compra);
-    abstract void realizarTransacao(Compra compra);
-    abstract void compraFinalizada(Compra compra);
-    abstract void exibirComprovante(Compra compra);
-    abstract void pedidoEnviado();
+        abstract void exibirProdutos(Compra compra);
+        abstract void realizarPagamento(Compra compra);
+        abstract boolean realizarValidacao(Compra compra); 
+        abstract void compraAprovada(Compra compra);
+        abstract void realizarTransacao(Compra compra);
+        abstract void compraFinalizada(Compra compra);
+        abstract void exibirComprovante(Compra compra);
+        abstract void pedidoEnviado();
 
     // if (compraAprovada == true)
             //CompraAprovada //pagamento realizado com sucesso

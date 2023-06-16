@@ -1,42 +1,55 @@
 public class Pix extends PadraoMethod {
 
          
-    @Override
-    void realizarPagamento(Compra compra) {
-        System.out.println("===========================================");
-        System.out.println("REALIZANDO PAGAMENTO COM PIX");
+
+     @Override
+    void exibirProdutos(Compra compra) {
         System.out.println("Itens da Compra");        
         for(Product produto : compra.getProdutos()){
-            System.out.println("- " + produto.getNome() + " (R$" + produto.getPreco() + ")");
+            System.out.println("-   " + produto.getNome() + " (R$" + produto.getPreco() + ")");
         }    
         System.out.println("");   
         
         System.out.println("        Valor À PAGAR: R$"+compra.calcularCompra());
-        System.out.println("==========================================="); 
+        
+    }
+    @Override
+    void realizarPagamento(Compra compra) {
+        System.out.println("===========================================");
+        System.out.println("REALIZANDO PAGAMENTO COM PIX");
+        exibirProdutos(compra);
+         
 
     }
 
      @Override
     void compraAprovada(Compra compra) {
-        System.out.println("PROCESSANDO PAGAMENTO...");
-        System.out.println("PIX: COMPRA APROVADA");
+        System.out.println("    PROCESSANDO PAGAMENTO...");
+        System.out.println("    PIX: COMPRA APROVADA");
+        
+        
     }
 
     @Override
     void exibirComprovante(Compra compra) {
-       // System.out.println("PIX: EXIBIR COMPROVANTE");
+        System.out.println("    PIX: EXIBIR COMPROVANTE");
+       //String id = "213234";
+       //String data = "12/12/12";
+       exibirProdutos(compra);
         
-        System.out.println("==========================================="); 
-        System.out.println("COMPROVANTE DE PAGAMENTO");
-        System.out.println("Itens da Compra");        
-        for(Product produto : compra.getProdutos()){
-            System.out.println("- " + produto.getNome() + " (R$" + produto.getPreco() + ")");
-        }    
-        System.out.println("");   
+        // System.out.println("==========================================="); 
+        // System.out.println("COMPROVANTE DE PAGAMENTO");
+        // System.out.println("Itens da Compra"); 
+              
+        // for(Product produto : compra.getProdutos()){
+        //     System.out.println("- " + produto.getNome() + " (R$" + produto.getPreco() + ")");
+        // }    
+        // System.out.println("");   
         
-        //System.out.println("Data do pagamento: "+compra);
-        System.out.println("Valor À PAGAR: R$"+compra.calcularCompra());
-        System.out.println("===========================================");
+        // System.out.println("Código da compra: "+id); 
+        // System.out.println("Data da compra: "+data);
+        // System.out.println("Valor À PAGAR: R$"+compra.calcularCompra());
+        // System.out.println("===========================================");
     }
 
 
@@ -62,6 +75,7 @@ public class Pix extends PadraoMethod {
     @Override
     boolean realizarValidacao(Compra compra) {       
         // Lógica de validação do pedido
+        
         return true;
 
     
@@ -79,6 +93,8 @@ public class Pix extends PadraoMethod {
     //     return false;
     // }
     }
+
+   
 
  
 }

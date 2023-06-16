@@ -14,12 +14,12 @@ public class App {
         purchase.addproduto(item2);
         purchase.addproduto(item3);
 
-        purchase.dadosdaCompra(purchase, "12121245","12/12/12");
 
         System.out.println("");
 
         FacadePagamento Pagamento = new FacadePagamento();
         Pagamento.pagarComPix(purchase);
+
 
 
 

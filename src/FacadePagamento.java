@@ -1,19 +1,12 @@
 //USANDO O PADRÃO FACADE
 public class FacadePagamento {
+    //criando objeto PIX
     private Pix pix = new Pix();
 
-    // public MetodoPagamento(Pix pix){
-    //     pix.exibirComprovante();
-
-    // }
-
-//     public void pagarCompra(Compra compra) {
-//         pix.detalhesPagamentos(compra);
-
-//}
     public void cancelarPagamento(Compra compra) {   
         System.out.println("O pagamento foi cancelado");
         pix.compraFinalizada(compra);
+        pix.exibirProdutos(compra);
 
     }
 
