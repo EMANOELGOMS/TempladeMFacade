@@ -27,9 +27,11 @@ public class Pix extends PadraoMethod {
         System.out.println("===========================================");
         System.out.println("PROCESSANDO PAGAMENTO...");
         System.out.println("PROCESSANDO PAGAMENTO...");
-        System.out.println("PROCESSANDO PAGAMENTO..."); 
-        System.out.println("");
+      
+        
+        System.out.println("===========================================");
         System.out.println("PIX: COMPRA APROVADA");
+        //System.out.println("===========================================");
         
         
         
@@ -53,9 +55,10 @@ public class Pix extends PadraoMethod {
     @Override
     void realizarTransacao(Compra compra) {
         
-        System.out.println("");
+        System.out.println("===========================================");
         System.out.println("PIX: REALIZANDO TRANSAÇÃO");
-        System.out.println("");
+        System.out.println("===========================================");
+        
     }
 
     @Override
@@ -68,15 +71,20 @@ public class Pix extends PadraoMethod {
     @Override
     void pedidoEnviado() {
         
-        System.out.println("");
+        
         System.out.println("PIX: O PEDIDO ESTA SENDO ENVIADO");
         System.out.println("==========================================="); 
+    }
+
+    @Override
+    void pedidoEntregue(){
+        System.out.println("O pedido foi entregue com SUCESSO!!");
+
     }
 
 
     @Override
     boolean realizarValidacao(Compra compra) {       
-        // Lógica de validação do pedido
         
         return true;
 

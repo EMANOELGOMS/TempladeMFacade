@@ -23,10 +23,9 @@ public class App {
 
 
 
-        System.out.println("");
-        System.out.println("    PEDIDO CANCELADO (... em breve)");
-
-        Pagamento.cancelarPagamento(purchase);
+        //System.out.println("");
+        //System.out.println("    PEDIDO CANCELADO (... em breve)");
+        //Pagamento.cancelarPagamento(purchase);
 
 
 

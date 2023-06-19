@@ -3,12 +3,12 @@ public class FacadePagamento {
     //criando objeto PIX
     private Pix pix = new Pix();
 
-    public void cancelarPagamento(Compra compra) {   
-        System.out.println("O pagamento foi cancelado");
-        pix.compraFinalizada(compra);
-        pix.exibirProdutos(compra);
+    // public void cancelarPagamento(Compra compra) {   
+    //     System.out.println("O pagamento foi cancelado");
+    //     pix.compraFinalizada(compra);
+    //     pix.exibirProdutos(compra);
 
-    }
+    // }
 
     public void pagarComPix(Compra compra){
         pix.detalhesPagamentos(compra);
