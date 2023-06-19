@@ -5,7 +5,7 @@ public class Pix extends PadraoMethod {
      @Override
     void exibirProdutos(Compra compra) {
         System.out.println("Itens da Compra");        
-        for(Product produto : compra.getProdutos()){
+        for(Produto produto : compra.getProdutos()){
             System.out.println("    -   " + produto.getNome() + " (R$" + produto.getPreco() + ")");
         }    
         System.out.println("");   
@@ -26,11 +26,11 @@ public class Pix extends PadraoMethod {
     void compraAprovada(Compra compra) {
         System.out.println("===========================================");
         System.out.println("PROCESSANDO PAGAMENTO...");
-        System.out.println("PROCESSANDO PAGAMENTO...");
+       
       
         
         System.out.println("===========================================");
-        System.out.println("PIX: COMPRA APROVADA");
+        System.out.println("COMPRA APROVADA");
         //System.out.println("===========================================");
         
         
@@ -56,14 +56,14 @@ public class Pix extends PadraoMethod {
     void realizarTransacao(Compra compra) {
         
         System.out.println("===========================================");
-        System.out.println("PIX: REALIZANDO TRANSAÇÃO");
+        System.out.println("REALIZANDO TRANSAÇÃO");
         System.out.println("===========================================");
         
     }
 
     @Override
     void compraFinalizada(Compra compra) {
-        System.out.println("PIX: COMPRA FINALIZADA");
+        System.out.println("COMPRA FINALIZADA");
         
         
     }
@@ -71,13 +71,16 @@ public class Pix extends PadraoMethod {
     @Override
     void pedidoEnviado() {
         
-        
-        System.out.println("PIX: O PEDIDO ESTA SENDO ENVIADO");
+        System.out.println("    PROCESSO DO PEDIDO");
+        System.out.println("O PEDIDO ESTA SENDO ENVIADO");
+        System.out.println("O pedido foi enviado com SUCESSO!! BEBE");
         System.out.println("==========================================="); 
     }
 
     @Override
     void pedidoEntregue(){
+        
+        System.out.println("O pedido esta na cidade do destina da entrega");
         System.out.println("O pedido foi entregue com SUCESSO!!");
 
     }

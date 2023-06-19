@@ -11,8 +11,8 @@ public abstract class PadraoMethod {
             realizarTransacao(compra);
             compraFinalizada(compra);
             exibirComprovante(compra);
-            pedidoEnviado();
-            pedidoEntregue();
+            processoPedido();
+            
         }else{
             System.out.println("Pedido inválido. Não pode ser processado.");
             }
@@ -26,6 +26,12 @@ public abstract class PadraoMethod {
         abstract void exibirComprovante(Compra compra);
         abstract void pedidoEnviado();
         abstract void pedidoEntregue();
+
+        final void processoPedido(){
+            pedidoEnviado();
+            pedidoEntregue();
+            
+        }
 
 
     // if (compraAprovada == true)

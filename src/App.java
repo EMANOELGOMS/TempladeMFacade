@@ -2,23 +2,27 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // criando a compra
-        Compra purchase = new CompraComum();
+        Compra compra = new CompraComum();
 
         // criação dos produtos
-        Product item1 = new Product("Camiseta", 30);
-        Product item2 = new Product("Calça", 60);
-        Product item3 = new Product("Tenis", 100);
+        Produto item1 = new Produto("Camiseta", 30);
+        Produto item2 = new Produto("Calça", 60);
+        Produto item3 = new Produto("Tenis", 100);
 
         // adicionando itens no carrinho
-        purchase.addproduto(item1);
-        purchase.addproduto(item2);
-        purchase.addproduto(item3);
+        compra.addproduto(item1);
+        compra.addproduto(item2);
+        compra.addproduto(item3);
+
+        
 
 
         System.out.println("");
 
         FacadePagamento Pagamento = new FacadePagamento();
-        Pagamento.pagarComPix(purchase);
+        //Pagamento.pagarComPix(purchase);
+        Pagamento.pagarCartaoCredito(compra);
+        Pagamento.PagarDebito(compra);
 
 
 

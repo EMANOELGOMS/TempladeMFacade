@@ -3,7 +3,7 @@ import java.util.List;
 
 public class CompraComum implements Compra{
     
-   private List<Product> produtos;
+   private List<Produto> produtos;
 
     //construtor
     public CompraComum() {
@@ -12,7 +12,7 @@ public class CompraComum implements Compra{
 
     //add produtos
     @Override
-    public void addproduto(Product produto) {
+    public void addproduto(Produto produto) {
         produtos.add(produto);
         
     }
@@ -22,7 +22,7 @@ public class CompraComum implements Compra{
 
         double total = 0.0;
 
-        for(Product produto:produtos){
+        for(Produto produto:produtos){
             total += produto.getPreco();
 
         }
@@ -31,7 +31,7 @@ public class CompraComum implements Compra{
     }
     
     @Override
-    public List<Product> getProdutos() {
+    public List<Produto> getProdutos() {
         
         return produtos;
     }
